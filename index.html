@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atelier — Premium E-Commerce</title>
+    <meta name="description" content="Premium storefront for modern essentials." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/home.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-shell">
+        <a class="brand" href="./index.html" aria-label="Atelier home">
+          <img src="./assets/logo/logo.svg" alt="Atelier logo" />
+          <span>Atelier</span>
+        </a>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="./index.html" class="active">Home</a>
+          <a href="./products.html">Products</a>
+          <a href="./wishlist.html">Wishlist</a>
+          <a href="./cart.html">Cart</a>
+          <a href="./checkout.html">Checkout</a>
+        </nav>
+        <div class="nav-actions">
+          <div class="search-box">
+            <input id="globalSearch" type="search" placeholder="Search products" aria-label="Search products" />
+            <button id="searchButton" type="button" aria-label="Search">⌕</button>
+          </div>
+          <button id="themeToggle" class="icon-button" aria-label="Toggle dark mode">☀️</button>
+          <a href="./wishlist.html" class="icon-button" aria-label="Wishlist">♡</a>
+          <a href="./cart.html" class="icon-button cart-link" aria-label="Cart">
+            🛍️
+            <span id="cartCount" class="count-badge">0</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero-section">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Curated essentials for the modern wardrobe</p>
+            <h1>Luxury meets everyday performance.</h1>
+            <p>Discover timeless design, refined materials, and premium craftsmanship delivered with fast shipping.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="./products.html">Shop now</a>
+              <a class="btn btn-secondary" href="#featured">Explore drops</a>
+            </div>
+            <ul class="hero-stats">
+              <li><strong>24h</strong><span>dispatch</span></li>
+              <li><strong>4.9/5</strong><span>rating</span></li>
+              <li><strong>Free</strong><span>returns</span></li>
+            </ul>
+          </div>
+          <div class="hero-media">
+            <div class="hero-card"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="featured" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Featured Products</p>
+              <h2>Handpicked for elevated living.</h2>
+            </div>
+            <a class="text-link" href="./products.html">View all</a>
+          </div>
+          <div id="featuredProducts" class="product-grid"></div>
+        </div>
+      </section>
+
+      <section class="section alt-section">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Trending picks</p>
+              <h2>What customers are loving right now.</h2>
+            </div>
+          </div>
+          <div id="trendingProducts" class="product-grid"></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Browse by category</p>
+              <h2>Designed for every lifestyle.</h2>
+            </div>
+          </div>
+          <div id="categoriesList" class="category-grid"></div>
+        </div>
+      </section>
+
+      <section class="section alt-section">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Popular brands</p>
+              <h2>Trusted names with modern energy.</h2>
+            </div>
+          </div>
+          <div id="brandsList" class="brand-grid"></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container deal-card">
+          <div>
+            <p class="eyebrow">Best deals</p>
+            <h2>Save up to 40% on limited-stock favorites.</h2>
+            <p>Limited-time offers on statement essentials and refined accessories.</p>
+          </div>
+          <div id="dealsList" class="deal-list"></div>
+        </div>
+      </section>
+
+      <section class="section alt-section">
+        <div class="container newsletter-card">
+          <div>
+            <p class="eyebrow">Stay inspired</p>
+            <h2>Join our newsletter for first access to new arrivals.</h2>
+          </div>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" aria-label="Email address" />
+            <button class="btn btn-primary" type="submit">Subscribe</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Testimonials</p>
+              <h2>What our customers say.</h2>
+            </div>
+          </div>
+          <div class="testimonial-grid">
+            <article class="testimonial-card">
+              <p>“The finish and quality feel truly premium. Every piece looks intentional.”</p>
+              <strong>Isabella M.</strong>
+            </article>
+            <article class="testimonial-card">
+              <p>“Shipping was fast, packaging felt luxe, and the experience was effortless.”</p>
+              <strong>Daniel R.</strong>
+            </article>
+            <article class="testimonial-card">
+              <p>“A beautiful balance of minimalism and comfort. I’ve already ordered twice.”</p>
+              <strong>Mina L.</strong>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-shell">
+        <div>
+          <a class="brand footer-brand" href="./index.html">
+            <img src="./assets/logo/logo.svg" alt="Atelier logo" />
+            <span>Atelier</span>
+          </a>
+          <p>Minimal luxury for modern living.</p>
+        </div>
+        <div>
+          <h3>Shop</h3>
+          <a href="./products.html">All products</a>
+          <a href="./wishlist.html">Wishlist</a>
+          <a href="./checkout.html">Checkout</a>
+        </div>
+        <div>
+          <h3>Support</h3>
+          <a href="#">Shipping</a>
+          <a href="#">Returns</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <button id="scrollTop" class="scroll-top" aria-label="Scroll to top">↑</button>
+    <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+    <script type="module" src="./js/app.js"></script>
+    <script type="module" src="./js/search.js"></script>
+    <script type="module" src="./js/home.js"></script>
+  </body>
+</html>

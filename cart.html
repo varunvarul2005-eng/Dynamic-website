@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart — Atelier</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/cart.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-shell">
+        <a class="brand" href="./index.html" aria-label="Atelier home">
+          <img src="./assets/logo/logo.svg" alt="Atelier logo" />
+          <span>Atelier</span>
+        </a>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="./index.html">Home</a>
+          <a href="./products.html">Products</a>
+          <a href="./wishlist.html">Wishlist</a>
+          <a href="./cart.html" class="active">Cart</a>
+          <a href="./checkout.html">Checkout</a>
+        </nav>
+        <div class="nav-actions">
+          <div class="search-box">
+            <input id="globalSearch" type="search" placeholder="Search products" aria-label="Search products" />
+            <button id="searchButton" type="button" aria-label="Search">⌕</button>
+          </div>
+          <button id="themeToggle" class="icon-button" aria-label="Toggle dark mode">☀️</button>
+          <a href="./wishlist.html" class="icon-button" aria-label="Wishlist">♡</a>
+          <a href="./cart.html" class="icon-button cart-link" aria-label="Cart">
+            🛍️
+            <span id="cartCount" class="count-badge">0</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <div class="container cart-layout">
+        <section class="cart-list-section">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Your bag</p>
+              <h1>Cart</h1>
+            </div>
+          </div>
+          <div id="cartItems" class="cart-items"></div>
+        </section>
+        <aside class="summary-card">
+          <h2>Order summary</h2>
+          <div class="summary-row"><span>Subtotal</span><strong id="subtotal">₹0</strong></div>
+          <div class="summary-row"><span>Delivery</span><strong id="delivery">₹0</strong></div>
+          <div class="summary-row"><span>Discount</span><strong id="discount">₹0</strong></div>
+          <div class="summary-row total"><span>Total</span><strong id="grandTotal">₹0</strong></div>
+          <div class="coupon-box">
+            <label class="sr-only" for="couponInput">Coupon code</label>
+            <input id="couponInput" type="text" placeholder="Coupon code" />
+            <button id="applyCoupon" class="btn btn-secondary">Apply</button>
+          </div>
+          <a class="btn btn-primary full-width" href="./checkout.html">Proceed to checkout</a>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-shell">
+        <div>
+          <a class="brand footer-brand" href="./index.html">
+            <img src="./assets/logo/logo.svg" alt="Atelier logo" />
+            <span>Atelier</span>
+          </a>
+          <p>Minimal luxury for modern living.</p>
+        </div>
+      </div>
+    </footer>
+
+    <button id="scrollTop" class="scroll-top" aria-label="Scroll to top">↑</button>
+    <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+    <script type="module" src="./js/app.js"></script>
+    <script type="module" src="./js/search.js"></script>
+    <script type="module" src="./js/cart.js"></script>
+  </body>
+</html>
